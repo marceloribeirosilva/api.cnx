@@ -4,5 +4,10 @@
   "port": 5432,
   "username": "cnx",
   "password": "cnx",
-  "database": "cnx"
+  "database": "cnx",
+  "entities": ["./src/models/*.ts"],
+  "migrations": ["./src/database/migrations/*.ts"],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
 }
