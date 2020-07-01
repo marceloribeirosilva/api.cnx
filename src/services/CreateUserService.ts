@@ -29,12 +29,13 @@ class CreateUserService {
     }
 
     const hashedPassword = await hash(password, 8);
+    const hashedPersonalNotes = await hash(personal_notes, 8);
 
     const user = userRepository.create({
       name,
       email,
       password: hashedPassword,
-      personal_notes,
+      personal_notes: hashedPersonalNotes,
       hometown,
     });
 

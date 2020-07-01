@@ -17,6 +17,7 @@ usersRouter.post('/', async (request, response) => {
   });
 
   delete user.user.password;
+  delete user.user.personal_notes;
 
   return response.json(user);
 });
