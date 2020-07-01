@@ -23,18 +23,24 @@
         "prettier"
     ],
     "rules": {
-        "prettier/prettier": "error",
-        "import/extensions": [
-            "error",
-            "ignorePackages",
-            {
-                "ts": "never"
-            }
-        ]
+      "no-param-reassign":0,
+      "prettier/prettier":"error",
+      "class-methods-use-this":"off",
+      "@typescript-eslint/camelcase":"off",
+      "@typescript-eslint/no-unused-vars": ["error",{
+        "argsIgnorePattern":"_"
+      }],
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "ts": "never"
+        }
+      ]
     },
     "settings": {
-        "import/resolver": {
-            "typescript": {}
-        }
+      "import/resolver": {
+        "typescript": {}
+      }
     }
-}
+  }
