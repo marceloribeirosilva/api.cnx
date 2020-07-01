@@ -20,6 +20,12 @@ class User {
   @Column()
   password: string;
 
+  @Column()
+  personal_notes: string;
+
+  @Column()
+  hometown: string;
+
   @CreateDateColumn()
   created_at: Date;
 
