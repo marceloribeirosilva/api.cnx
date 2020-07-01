@@ -1,8 +1,8 @@
 {
- "type":"postgres",
- "host":"localhost",
- "port": 5432,
- "username":"postgres",
- "password":"cnx",
- "database":"api_cnx" 
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "cnx",
+  "password": "cnx",
+  "database": "cnx"
 }
