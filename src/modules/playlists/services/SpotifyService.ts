@@ -1,10 +1,10 @@
 import Spotify from 'node-spotify-api';
 import AppError from '@shared/errors/AppError';
-import SpotifyDTO from '../entities/Spotify';
+import ISpotifyDTO from '../entities/ISpotify';
 
 class SpotifyService {
-  public async execute(temperature: string): Promise<SpotifyDTO[]> {
-    const playlistReturn: SpotifyDTO[] = [];
+  public async execute(temperature: string): Promise<ISpotifyDTO[]> {
+    const playlistReturn: ISpotifyDTO[] = [];
 
     try {
       const spotifyApi = new Spotify({
@@ -16,8 +16,8 @@ class SpotifyService {
         `https://api.spotify.com/v1/browse/categories/${temperature}/playlists`,
       );
 
-      response.playlists.items.forEach((element: SpotifyDTO) => {
-        const obj: SpotifyDTO = {
+      response.playlists.items.forEach((element: ISpotifyDTO) => {
+        const obj: ISpotifyDTO = {
           description: element.description,
           href: element.href,
           id: element.id,

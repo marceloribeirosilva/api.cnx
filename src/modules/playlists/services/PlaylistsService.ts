@@ -1,12 +1,12 @@
 import SpotifyService from './SpotifyService';
 import OpenWeatherService from './OpenWeatherService';
-import SpotifyDTO from '../entities/Spotify';
+import ISpotifyDTO from '../entities/ISpotify';
 
 interface Response {
   city: string;
   temperature: number;
   styleMusic: string;
-  playlist: SpotifyDTO[];
+  playlist: ISpotifyDTO[];
 }
 
 class PlaylistsService {

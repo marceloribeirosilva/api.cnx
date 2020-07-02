@@ -1,4 +1,4 @@
-export default interface SpotifyDTO {
+interface ISpotifyDTO {
   description: string;
   href: string;
   id: string;
@@ -8,3 +8,5 @@ export default interface SpotifyDTO {
     total: number;
   };
 }
+
+export default ISpotifyDTO;
