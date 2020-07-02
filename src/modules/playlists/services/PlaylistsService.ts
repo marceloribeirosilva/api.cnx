@@ -1,6 +1,6 @@
 import SpotifyService from './SpotifyService';
 import OpenWeatherService from './OpenWeatherService';
-import ISpotifyDTO from '../entities/ISpotify';
+import ISpotifyDTO from '../dtos/ISpotifyDTO';
 
 interface Response {
   city: string;

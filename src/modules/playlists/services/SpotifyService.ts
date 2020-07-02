@@ -1,6 +1,6 @@
 import Spotify from 'node-spotify-api';
 import AppError from '@shared/errors/AppError';
-import ISpotifyDTO from '../entities/ISpotify';
+import ISpotifyDTO from '../dtos/ISpotifyDTO';
 
 class SpotifyService {
   public async execute(temperature: string): Promise<ISpotifyDTO[]> {
