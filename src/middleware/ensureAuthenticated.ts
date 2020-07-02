@@ -5,7 +5,7 @@ import AppError from '../errors/AppError';
 import authConfig from '../config/auth';
 
 interface TokenPayload {
-  hom: string;
+  hometown: string;
   iat: number;
   exp: number;
   sub: string;
@@ -27,11 +27,11 @@ export default function ensureAuthenticated(
   try {
     const decoded = verify(token, authConfig.jwt.secret);
 
-    const { sub, hom } = decoded as TokenPayload;
+    const { sub, hometown } = decoded as TokenPayload;
 
     request.user = {
       id: sub,
-      hometown: hom,
+      hometown,
     };
 
     return next();
