@@ -1,5 +1,5 @@
 import axios from 'axios';
-import AppError from '../errors/AppError';
+import AppError from '@shared/errors/AppError';
 
 class OpenWeatherService {
   public async execute(city: string): Promise<number> {

@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import ensureAuthenticated from '../middleware/ensureAuthenticated';
-import PlaylistsService from '../services/PlaylistsService';
+import ensureAuthenticated from '@modules/users/infra/http/middleware/ensureAuthenticated';
+import PlaylistsService from '@modules/playlists/services/PlaylistsService';
 
 const PlaylistRouter = Router();
 PlaylistRouter.use(ensureAuthenticated);
