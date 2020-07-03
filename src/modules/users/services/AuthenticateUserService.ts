@@ -1,3 +1,4 @@
+import { inject, injectable } from 'tsyringe';
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 
@@ -12,9 +13,11 @@ interface Request {
   email: string;
   password: string;
 }
-
+@injectable()
 class AutheticateUserService {
-  constructor(private usersRepository: IUsersRepository) {}
+  constructor(
+    @inject('UsersRepository') private usersRepository: IUsersRepository,
+  ) {}
 
   public async execute({
     email,
