@@ -16,8 +16,8 @@ class SendForgotPasswordEmailService {
     @inject('MailProvider')
     private mailProvider: IMailProvider,
 
-    @inject('UserTokenRepository')
-    private userTokenRepository: IUserTokensRepository,
+    @inject('UserTokensRepository')
+    private userTokensRepository: IUserTokensRepository,
   ) {}
 
   public async execute({ email }: IRequest): Promise<void> {
@@ -27,7 +27,7 @@ class SendForgotPasswordEmailService {
       throw new AppError('User this not exists');
     }
 
-    await this.userTokenRepository.generate(user.id);
+    await this.userTokensRepository.generate(user.id);
 
     this.mailProvider.sendMail(
       email,
