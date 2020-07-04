@@ -1,5 +1,6 @@
 import Spotify from 'node-spotify-api';
 import AppError from '@shared/errors/AppError';
+import SpotifyConfig from '@config/spotify';
 import ISpotifyDTO from '../dtos/ISpotifyDTO';
 
 class SpotifyService {
@@ -8,8 +9,8 @@ class SpotifyService {
 
     try {
       const spotifyApi = new Spotify({
-        id: '2f2a7259249d4039b71dfb549c561b4d',
-        secret: 'a640fe6cbd2e47058392b73aece3d0d7',
+        id: SpotifyConfig.id,
+        secret: SpotifyConfig.secret,
       });
 
       const response = await spotifyApi.request(
