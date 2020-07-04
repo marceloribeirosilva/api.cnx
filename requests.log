@@ -1,0 +1,1 @@
+{"meta":{"req":{"url":"/sessions","headers":{"host":"localhost:3333","user-agent":"insomnia/2020.2.2","content-type":"application/json","accept":"*/*","content-length":"58"},"method":"POST","httpVersion":"1.1","originalUrl":"/sessions","query":{}},"res":{"statusCode":200},"responseTime":77},"level":"info","message":"POST /sessions 200 77ms","timestamp":"03/07/2020 - 21:51:04"}

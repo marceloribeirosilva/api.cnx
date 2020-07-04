@@ -3,6 +3,8 @@ import 'reflect-metadata';
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import 'express-async-errors';
+import winston from 'winston';
+import expressWinston from 'express-winston';
 
 import AppError from '@shared/errors/AppError';
 
@@ -16,6 +18,26 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
+
+app.use(
+  expressWinston.logger({
+    transports: [
+      new winston.transports.File({
+        filename: 'requests.log',
+      }),
+    ],
+    format: winston.format.combine(
+      winston.format.timestamp({
+        format: `${new Date().toLocaleDateString()} - ${new Date().toLocaleTimeString()}`,
+      }),
+      winston.format.json(),
+    ),
+    meta: true,
+    msg: 'HTTP {{req.method}} {{req.url}}',
+    expressFormat: true,
+    colorize: false,
+  }),
+);
 
 app.use(routes);
 
