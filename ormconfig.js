@@ -18,9 +18,9 @@ const development = {
   host: 'localhost',
   port: 5432,
   url: '',
-  username: 'postgres',
-  password: 'docker',
-  database: 'vuttr',
+  username: 'cnx',
+  password: 'cnx',
+  database: 'cnx',
   entities: ['./src/modules/**/infra/typeorm/entities/*.ts'],
   migrations: ['./src/shared/infra/typeorm/migrations/*.ts'],
   cli: {

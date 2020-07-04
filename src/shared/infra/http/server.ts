@@ -53,7 +53,7 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
     .json({ status: 'error', message: 'Internal server error' });
 });
 
-const port = process.env.DATABASE_URL ? process.env.PORT : 3000;
+const port = process.env.DATABASE_URL ? process.env.PORT : 3333;
 
 app.listen(port, () => {
   console.log('Server started');
