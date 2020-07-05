@@ -32,6 +32,7 @@
 - [Deploy](#deploy)
 - [Uso](#usage)
 - [Construído utilizando](#built_using)
+- [Log das requisições](#logs)
 - [Autor](#authors)
 
 ## 👀 Sobre <a name = "about"></a>
@@ -121,6 +122,14 @@ yarn dev:server
 - [Axios](https://github.com/axios/axios)
 - [bcryptjs](https://github.com/dcodeIO/bcrypt.js#readme)
 - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken#readme)
+
+## 🤔 Log das requisições <a name = "logs"></a>
+
+Para logar todas as requisições da aplicação, estou utilizando duas ferramentas: [Winston](https://github.com/winstonjs/winston#readme) e [Express Winston](https://github.com/bithavoc/express-winston#readme).
+
+Porém a estratégia que adotei foi logar em arquivo, o que pode ser visto na raiz, em um arquivo chamado: requests.log.
+
+Após a publicação no Heroku, notei que essa estratégia pode ser melhorada, de repente salvando no banco. (Entrará para uma próxima etapa).
 
 ## ✍️ Autor <a name = "authors"></a>
 
