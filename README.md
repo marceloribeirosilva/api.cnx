@@ -82,6 +82,9 @@ Quando é realizado o reset passando o token (UUID), o sistema internamente veri
 
 Você pode utilizar a API, está aqui: `https://api-cnx.herokuapp.com`
 
+**`Observação:`**
+É necessário utilizar algum sistema Rest Client, como por exemplo: [Insomnia](https://insomnia.rest/download/)
+
 ### Instalação e execução local
 
 Criar um fork do github
