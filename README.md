@@ -61,7 +61,7 @@ Criado se baseando nos seguintes requisitos:
 
 - **`POST /sessions`**: Rota para criar a sessão do usuário. O corpo da requisição deve conter os seguintes campos: email; password. O response da requisição traz todos os dados do usuário e o token JWT que tem validade de 2 horas.
 
-- **`GET /playlists`**: Rota para sugerir as playlists de acordo com a temperatura da cidade natal do usuário. Essa requisição não precisa ter um corpo, porém, é necessário incluir uma autenticação do tipo Bearer (Token). **`Observação:`** É através do token que a api sabe qual é a cidade natal do usuário (Payload).
+- **`GET /playlists`**: Rota para sugerir as playlists de acordo com a temperatura da cidade natal do usuário. Essa requisição não precisa ter um corpo, porém, é necessário incluir uma autenticação do tipo Bearer (Token). **`Observação:`** É através do token que a api sabe qual é a cidade natal do usuário (Token Payload).
 
 - **`POST /password/forgot`**: Rota com o mecanismo de 'esqueci minha senha'. O corpo da requisição deve conter o seguinte campo: email.
 
