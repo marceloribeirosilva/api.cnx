@@ -97,6 +97,9 @@ Configurar os dados de acesso ao banco local no arquivo `ormconfig.json` e criar
 
 Configurar as variáveis de ambiente no arquivo `.env.example` que está na raiz do projeto.
 
+**`Observação:`**
+Nesse arquivo será necessário você incluir suas informações pessoais que obtém junto ao Spotify e junto ao OpenWeather. Também será necessário definir uma chave para o token JWT.
+
 Renomear o arquivo `.env.example` para `.env`
 
 ## 🎈 Uso <a name="usage"></a>
