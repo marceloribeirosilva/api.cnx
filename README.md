@@ -71,7 +71,7 @@ Criado se baseando nos seguintes requisitos:
 
 ## 🧭 Mecânismo: Esqueci minha senha<a name = "forgot_password"></a>
 
-A solicitação é feita passando apenas o e-mail no corpo da requisição. Internamente, o sistema gera um token (UUID) e grava essa informação juntamente com o id do usuário em uma tabela dentro do banco de dados chamada user_tokens. Internamente, o sistema verifica se está em ambiente de desenvolvimento e envia um e-mail utilizando o serviço Ethereal (fake smtp service). É possível ver o resultado disso no console.
+A solicitação é feita passando apenas o e-mail no corpo da requisição. Internamente, o sistema gera um token (UUID) e grava essa informação juntamente com o id do usuário em uma tabela dentro do banco de dados chamada user_tokens. Internamente, o sistema verifica se está em ambiente de desenvolvimento e envia um e-mail utilizando o serviço [Ethereal](https://ethereal.email/) (fake smtp service). É possível ver o resultado disso no console.
 
 A ideia é implementar isso também em produção, porém, utilizando algum serviço real, como por exemplo: Amazon SES Smpt. (Entrará nos próximos passos).
 
