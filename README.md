@@ -109,5 +109,5 @@ yarn dev:server
 
 **Marcelo Silva**
 
-- Github: [@larabeatrizms](https://github.com/larabeatrizms)
-- LinkedIn: [@larabeatrizms](https://linkedin.com/in/larabeatrizms)
+- Github: [@marceloribeirosilva](https://github.com/marceloribeirosilva)
+- LinkedIn: [@marcelors](https://www.linkedin.com/in/marcelors/)
