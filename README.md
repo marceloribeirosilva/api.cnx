@@ -68,7 +68,7 @@ Criado se baseando nos seguintes requisitos:
 
 - **`POST /password/reset`**: Rota para resetar a senha do usuário. O corpo da requisição deve conter os seguintes campos: password (o novo password escolhido pelo usuário), token (esse token é obtido pelo mecanismo /password/forgot).
 
-## 🚀 Mecânismo: Esqueci minha senha<a name = "forgot_password"></a>
+## 🧭 Mecânismo: Esqueci minha senha<a name = "forgot_password"></a>
 
 A solicitação é feita passando apenas o e-mail no corpo da requisição. Internamente, o sistema gera um token (UUID) e grava essa informação juntamente com o id do usuário em uma tabela dentro do banco de dados chamada user_tokens. Internamente, o sistema verifica se está em ambiente de desenvolvimento e envia um e-mail utilizando o serviço Ethereal (fake smtp service). É possível ver o resultado disso no console.
 
