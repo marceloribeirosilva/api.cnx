@@ -28,6 +28,7 @@
 
 - [Sobre](#about)
 - [Iniciando](#getting_started)
+- [Mecanismo: Esqueci minha senha](#forgot_password)
 - [Deploy](#deploy)
 - [Uso](#usage)
 - [Construído utilizando](#built_using)
@@ -63,9 +64,19 @@ Criado se baseando nos seguintes requisitos:
 
 - **`GET /playlists`**: Rota para sugerir as playlists de acordo com a temperatura da cidade natal do usuário. Essa requisição não precisa ter um corpo, porém, é necessário incluir uma autenticação do tipo Bearer (Token). **`Observação:`** É através do token que a api sabe qual é a cidade natal do usuário (Token Payload).
 
-- **`POST /password/forgot`**: Rota com o mecanismo de 'esqueci minha senha'. O corpo da requisição deve conter o seguinte campo: email.
+- **`POST /password/forgot`**: Rota com o mecanismo de 'esqueci minha senha'. O corpo da requisição deve conter o seguinte campo: email. A resposta da requisição traz um token que será usado no reset da senha.
 
 - **`POST /password/reset`**: Rota para resetar a senha do usuário. O corpo da requisição deve conter os seguintes campos: password (o novo password escolhido pelo usuário), token (esse token é obtido pelo mecanismo /password/forgot).
+
+## 🚀 Mecânismo: Esqueci minha senha<a name = "forgot_password"></a>
+
+A solicitação é feita passando apenas o e-mail no corpo da requisição. Internamente, o sistema gera um token (UUID) e grava essa informação juntamente com o id do usuário em uma tabela dentro do banco de dados chamada user_tokens. Internamente, o sistema verifica se está em ambiente de desenvolvimento e envia um e-mail utilizando o serviço Ethereal (fake smtp service). É possível ver o resultado disso no console.
+
+A ideia é implementar isso também em produção, porém, utilizando algum serviço real, como por exemplo: Amazon SES Smpt. (Entrará nos próximos passos).
+
+Com isso, quem solicitou irá receber um e-mail com um link e o token para identificação.
+
+Quando é realizado o reset passando o token (UUID), o sistema internamente verifica se está dentro do prazo de duas horas. É uma regra de negócio que implementei.
 
 ## 🚀 Deploy<a name = "deploy"></a>
 
