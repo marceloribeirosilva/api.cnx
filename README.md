@@ -51,7 +51,7 @@ Criado se baseando nos seguintes requisitos:
 
 [ x ] Com base na cidade natal e na temperatura atual, é necessário recomendar a lista de reprodução, como segue: i) se a temperatura (celcius) estiver acima de 30 graus, sugerir faixas para a festa (party); ii) caso a temperatura esteja entre 15 e 30 graus, sugira faixas de música pop; iii) Se estiver um pouco frio (entre 10 e 14 graus), sugira faixas de música rock. iv) Caso contrário, se estiver frio lá fora, sugere faixas de música clássica (classical).
 
-**`Observação:`** Este projeto utiliza das apis externas Spotify para a sugestão das playlists e OpenWeather para pegar a temperatura atual da cidade natal.
+**`Observação:`** Este projeto se utiliza das apis externas Spotify para a sugestão das playlists e OpenWeather para pegar a temperatura atual da cidade natal.
 
 ## 🏁 Iniciando <a name = "getting_started"></a>
 
